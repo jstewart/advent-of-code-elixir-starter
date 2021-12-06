@@ -9,7 +9,7 @@ defmodule AdventOfCode.Day06 do
 
   defp process_lanternfish(fish, iterations) do
     state =
-      Enum.reduce(0..iterations, %{}, fn x, acc ->
+      Enum.reduce(0..8, %{}, fn x, acc ->
         Map.put(acc, x, Enum.count(fish, &(&1 == x)))
       end)
 
